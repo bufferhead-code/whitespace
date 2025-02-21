@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import HeroSectionOne from "../components/Hero/HeroSectionOne.astro";
+import ProjectSectionOne from "../components/Project/ProjectSectionOne.astro";
+import AboutOne from "../components/About/AboutOne.astro";
+import ExperienceSectionOne from "../components/Experience/ExperienceSectionOne.astro";
+import ServiceSectionOne from "../components/Service/ServiceSectionOne.astro";
+import LogoCloudSectionOne from "../components/LogoCloud/LogoCloudSectionOne.astro";
+import ContactFormOne from "../components/Contact/ContactFormOne.astro";
+import FooterOne from "../components/Footer/FooterOne.astro";
+import HeaderOne from "../components/Header/HeaderOne.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <HeaderOne />
+  <HeroSectionOne />
+  <ProjectSectionOne />
+  <AboutOne />
+  <ExperienceSectionOne />
+  <ServiceSectionOne />
+  <LogoCloudSectionOne />
+  <ContactFormOne />
+  <FooterOne />
 </Layout>

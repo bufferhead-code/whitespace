@@ -1,0 +1,69 @@
+---
+import ExperienceRow from "./ExperienceRow.astro";
+import acmeLogo from "@assets/placeholder/acme_square.svg";
+import alphaWaveLogo from "@assets/placeholder/alphawave_square.svg";
+import altShiftLogo from "@assets/placeholder/altshift_square.svg";
+import SectionTitle from "../Common/SectionTitle.astro";
+---
+
+<div class="container mx-auto border-t border-gray-200 pb-8 pt-6 isolate">
+  <SectionTitle class="mb-6">Experience & Education</SectionTitle>
+  <div class="space-y-6">
+    <ExperienceRow
+      image={acmeLogo}
+      title="Senior Full-Stack Developer at ACME Corp."
+      timeFrame="Jan 2019 - present"
+    >
+      <p>
+        At ACME Corp., I lead the development of scalable and high-performance
+        web applications that serve thousands of users daily.
+      </p>
+      <ul>
+        <li>
+          Led the development of a scalable SaaS platform serving 100K+ users.
+        </li>
+        <li>Built a high-performance API reducing response times by 40%.</li>
+        <li>Implemented CI/CD pipelines to streamline deployments.</li>
+      </ul>
+    </ExperienceRow>
+    <ExperienceRow
+      image={altShiftLogo}
+      title="Junior Developer at AltShift"
+      timeFrame="Jan 2014 - Feb 2019"
+    >
+      <p>
+        At AltShift, I worked on various projects, gaining experience in
+        front-end and back-end development.
+      </p>
+      <ul>
+        <li>
+          Developed a custom CMS for a client, reducing content management time
+          by 50%.
+        </li>
+        <li>
+          Built a responsive web app that increased user engagement by 30%.
+        </li>
+        <li>
+          Implemented automated testing, to eliminate 100% of the bugs, yes
+          really!
+        </li>
+      </ul>
+    </ExperienceRow>
+
+    <ExperienceRow
+      image={alphaWaveLogo}
+      title="University of Walled Garden"
+      timeFrame="Jan 2010 - Feb 2014"
+    >
+      <p>
+        I graduated from the University of Walled Garden with a degree in
+        Computer Science.
+      </p>
+      <ul>
+        <li>Graduated with honors.</li>
+        <li>Completed a thesis on the impact of AI on web development.</li>
+        <li>Participated in various hackathons and coding competitions.</li>
+      </ul>
+    </ExperienceRow>
+  </div>
+</div>

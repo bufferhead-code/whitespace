@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  name: string;
+  role: string;
+  image?: ImageMetadata;
+}
+
+const { name, role, image } = Astro.props;
+---
+
+<div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-xs">
+  <div class="flex items-center gap-4">
+    {
+      image && (
+        <Image
+          src={image}
+          alt={name}
+          class="h-12 w-12 rounded-full object-cover"
+        />
+      )
+    }
+    <div>
+      <h3 class="font-medium">{name}</h3>
+      <p class="text-gray-600 font-medium text-sm">{role}</p>
+    </div>
+  </div>
+
+  <p class="mt-6 text-gray-700">
+    "Best expierence I've ever had working with a person ever. Like honestly how
+    can you be such a perfect human being."
+  </p>
+</div>

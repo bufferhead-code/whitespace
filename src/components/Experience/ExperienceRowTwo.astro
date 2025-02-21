@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  timeFrame?: string;
+  role: string;
+  company: string;
+  image?: ImageMetadata;
+}
+
+const { timeFrame, role, company, image } = Astro.props;
+---
+
+<div
+  class="py-3.5 last-of-type:border-0 border-b border-gray-200 flex items-center gap-4"
+>
+  {
+    image && (
+      <Image
+        src={image}
+        alt={company + " Logo"}
+        class="w-12 h-12 p-2 shadow-xs border border-gray-200 rounded-lg"
+      />
+    )
+  }
+  <div class="w-full">
+    <h3 class="font-semibold">{role}</h3>
+    <div>
+      <div class="flex justify-between items-center text-sm text-gray-500">
+        <span class="font-semibold">{company}</span>
+        <span class="font-medium">{timeFrame}</span>
+      </div>
+    </div>
+  </div>
+</div>

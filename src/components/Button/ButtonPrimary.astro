@@ -1,0 +1,30 @@
+---
+import Button from "./Button.astro";
+import { twMerge } from "tailwind-merge";
+
+interface Props {
+  class?: string;
+  tag?: string;
+  href?: string;
+  target?: string;
+}
+
+const {
+  class: className,
+  tag = "button",
+  href,
+  target = "_blank",
+} = Astro.props;
+---
+
+<Button
+  class={twMerge(
+    "px-4 py-2 bg-indigo-600 text-white text-sm rounded-md shadow-sm font-semibold hover:bg-indigo-700 transition-colors cursor-pointer",
+    className,
+  )}
+  tag={tag}
+  href={tag === "a" ? href : undefined}
+  target={tag === "a" ? target : undefined}
+>
+  <slot />
+</Button>

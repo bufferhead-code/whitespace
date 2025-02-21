@@ -1,0 +1,71 @@
+---
+import { Image } from "astro:assets";
+import servicesExampleImage from "@assets/placeholder/services_example.jpg";
+import ServiceAccordionItem from "./ServiceAccordionItem.astro";
+---
+
+<div class="container mx-auto px-4 py-12 border-t border-gray-200">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    <!-- Image placeholder -->
+    <Image
+      src={servicesExampleImage}
+      alt="Working on providing services"
+      class="bg-gray-100 aspect-4/3 object-cover rounded-lg h-full"
+    />
+
+    <!-- Content section -->
+    <div class="space-y-6 py-4">
+      <!-- Header -->
+      <div class="space-y-2">
+        <div class="space-y-1">
+          <p class="font-semibold text-indigo-500">What I do</p>
+          <h1 class="text-4xl md:text-3xl font-semibold max-w-lg leading-tight">
+            I do have various skills in web development and design.
+          </h1>
+        </div>
+        <p class="text-gray-600 font-medium max-w-sm">
+          Let's collaborate! Whether you need a developer, designer, or creative
+          mind, I'm here to help.
+        </p>
+      </div>
+
+      <!-- Accordion items -->
+      <div class="space-y-2">
+        <ServiceAccordionItem
+          class="border-t border-gray-200"
+          title="Backend"
+          prefix="01"
+        >
+          <p>
+            I specialize in building scalable, secure, and high-performance
+            server architectures that power seamless user experiences. From API
+            development to database optimization, I ensure everything runs
+            smoothly behind the scenes.
+          </p>
+        </ServiceAccordionItem>
+        <ServiceAccordionItem
+          class="border-t border-gray-200"
+          title="Frontend"
+          prefix="02"
+        >
+          <p>
+            I craft modern, high-performance frontends that bring designs to
+            life, ensuring responsiveness, accessibility, and seamless
+            interactions across all devices.
+          </p>
+        </ServiceAccordionItem>
+        <ServiceAccordionItem
+          class="border-t border-gray-200"
+          title="Design"
+          prefix="03"
+        >
+          <p>
+            I create intuitive, visually striking interfaces that enhance user
+            engagement and simplify digital experiences. Every detail, from
+            typography to motion, is crafted with precision.
+          </p>
+        </ServiceAccordionItem>
+      </div>
+    </div>
+  </div>
+</div>

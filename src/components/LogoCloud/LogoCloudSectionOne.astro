@@ -1,0 +1,40 @@
+---
+import { Image } from "astro:assets";
+
+import acmeLogo from "@assets/placeholder/acme.svg";
+
+import alphawaveLogo from "@assets/placeholder/alphawave.svg";
+import altshiftLogo from "@assets/placeholder/altshift.svg";
+import boltshiftLogo from "@assets/placeholder/boltshift.svg";
+import codecraftLogo from "@assets/placeholder/codecraft.svg";
+import cubekitLogo from "@assets/placeholder/cubekit.svg";
+import easytaxLogo from "@assets/placeholder/easytax.svg";
+import eightballLogo from "@assets/placeholder/eightball.svg";
+import euphoriaLogo from "@assets/placeholder/euphoria.svg";
+import LogoCloudCard from "./LogoCloudCard.astro";
+import SectionTitle from "../Common/SectionTitle.astro";
+---
+
+<div class="container mx-auto px-4 py-6 border-t border-gray-200">
+  <SectionTitle class="mb-6">References</SectionTitle>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-5">
+    <LogoCloudCard image={acmeLogo} title="Acme Inc." />
+
+    <LogoCloudCard image={alphawaveLogo} title="AlphaWave" />
+
+    <LogoCloudCard image={altshiftLogo} title="AltShift" />
+
+    <LogoCloudCard image={boltshiftLogo} title="BoltShift" />
+
+    <LogoCloudCard image={codecraftLogo} title="CodeCraft" />
+
+    <LogoCloudCard image={cubekitLogo} title="CubeKit" />
+
+    <LogoCloudCard image={easytaxLogo} title="EasyTax" />
+
+    <LogoCloudCard image={eightballLogo} title="EightBall" />
+
+    <LogoCloudCard image={euphoriaLogo} title="Euphoria" />
+  </div>
+</div>

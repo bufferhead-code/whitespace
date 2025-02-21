@@ -1,0 +1,32 @@
+---
+import TestimonialCard from "./TestimonialCard.astro";
+
+// Create custom avatars at https://getavataaars.com
+import testimonialsImage1 from "@assets/placeholder/testimonial_1.svg";
+import testimonialsImage2 from "@assets/placeholder/testimonial_2.svg";
+---
+
+<div class="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
+  <div class="text-center mb-10">
+    <h1 class="text-3xl font-bold mb-1.5">Customers love us</h1>
+    <p class="text-gray-500 max-w-md mx-auto font-medium">
+      Lorem aliquip sit consequat tempor voluptate cupidatat elit cillum
+      consectetur duis.
+    </p>
+  </div>
+
+  <div class="grid gap-8 md:grid-cols-2">
+    <!-- Testimonial Card 1 -->
+    <TestimonialCard
+      name="John Doe"
+      role="CEO at Company"
+      image={testimonialsImage1}
+    />
+
+    <TestimonialCard
+      name="John Doe"
+      role="CEO at Company"
+      image={testimonialsImage2}
+    />
+  </div>
+</div>

@@ -1,0 +1,59 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import ButtonSecondary from "../Button/ButtonSecondary.astro";
+import SectionTitle from "../Common/SectionTitle.astro";
+import exampleImage from "@assets/placeholder/project/solidtime.png";
+import bufferthemesImage from "@assets/placeholder/project/bufferthemes.png";
+import justusImage from "@assets/placeholder/project/justus.png";
+import hostingCheckerImage from "@assets/placeholder/project/hosting_checker.png";
+---
+
+<section class="container mx-auto pt-6 pb-12 border-t border-gray-200 isolate">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+    <!-- Left column with heading -->
+    <div class="lg:col-span-3">
+      <SectionTitle>Projects</SectionTitle>
+    </div>
+
+    <!-- Right column with content -->
+    <div class="lg:col-span-9">
+      <!-- Description text -->
+      <p class="text-xl mb-8 font-medium">
+        I've worked on many projects over my 10+ years in the industry, creating
+        innovative solutions for various companies.
+      </p>
+
+      <!-- Projects grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <ProjectCard
+          title="Bufferthemes"
+          description="Build blazing-fast and beautiful Astro websites with our collection of beautifully designed and coded Astro components and templates."
+          image={bufferthemesImage}
+        />
+
+        <ProjectCard
+          title="Hosting-Checker"
+          description="Find out who hosts any website and where it is hosted. Get the IP, server location, hosting provider, and more."
+          image={hostingCheckerImage}
+        />
+
+        <ProjectCard
+          title="solidtime"
+          description="The modern open source time tracker for your freelance or agency work. With billable projects, tasks, billable rates and more."
+          image={exampleImage}
+        />
+
+        <ProjectCard
+          title="Justus App"
+          description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
+          image={justusImage}
+        />
+      </div>
+
+      <!-- See all projects button -->
+      <div class="flex justify-center">
+        <ButtonSecondary> See all projects </ButtonSecondary>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,45 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import ButtonSecondary from "../Button/ButtonSecondary.astro";
+import SectionTitle from "../Common/SectionTitle.astro";
+import exampleImage from "@assets/placeholder/project_example.png";
+import exampleLogo from "@assets/placeholder/project_logo.svg";
+---
+
+<section class="container mx-auto pt-8 pb-12 border-t border-gray-200 isolate">
+  <!-- Projects grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+    <ProjectCard
+      title="Frontend Development"
+      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
+      logo={exampleLogo}
+      image={exampleImage}
+    />
+
+    <ProjectCard
+      title="Frontend Development"
+      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
+      logo={exampleLogo}
+      image={exampleImage}
+    />
+
+    <ProjectCard
+      title="Frontend Development"
+      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
+      logo={exampleLogo}
+      image={exampleImage}
+    />
+
+    <ProjectCard
+      title="Frontend Development"
+      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
+      logo={exampleLogo}
+      image={exampleImage}
+    />
+  </div>
+
+  <!-- See all projects button -->
+  <div class="flex justify-center">
+    <ButtonSecondary> See all projects </ButtonSecondary>
+  </div>
+</section>

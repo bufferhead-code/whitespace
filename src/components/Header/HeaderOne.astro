@@ -1,0 +1,161 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import headerPortrait from "@assets/header_portrait.png";
+
+const navigationItems = [
+  {
+    title: "Home 2",
+    url: "/home-2",
+  },
+  {
+    title: "Home 3",
+    url: "/home-3",
+  },
+  {
+    title: "Work",
+    url: "#",
+  },
+  {
+    title: "Testimonials",
+    url: "#",
+  },
+  {
+    title: "Contact",
+    url: "#",
+  },
+];
+
+const socialItems = [
+  {
+    title: "Github",
+    url: "#",
+    icon: "mdi:github",
+  },
+  {
+    title: "Dribbble",
+    url: "#",
+    icon: "mdi:dribbble",
+  },
+  {
+    title: "Instagram",
+    url: "#",
+    icon: "mdi:instagram",
+  },
+  {
+    title: "Linkedin",
+    url: "#",
+    icon: "mdi:linkedin",
+  },
+];
+---
+
+<div class="w-full h-10">
+  <div class="w-full flex py-6 justify-center px-12 isolate relative z-30">
+    <header
+      class="mx-auto fixed px-5 container py-3 w-[95%] md:w-full rounded-xl shadow-xs z-20 border border-gray-200 bg-white/90 backdrop-blur-lg"
+    >
+      <nav class="w-full flex items-center justify-between">
+        <div class="flex gap-6">
+          <a
+            href="/"
+            class="text-gray-700 hover:text-gray-900 transition font-semibold md:border-r text-lg border-gray-200 pr-6 py-0.5"
+            >WHITESPACE</a
+          >
+          <div class="hidden md:flex items-center text-sm gap-6 font-medium">
+            {
+              navigationItems.map((item) => (
+                <a
+                  href={item.url}
+                  class="text-gray-500 hover:text-gray-900 transition"
+                >
+                  {item.title}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        <div class="hidden md:flex items-center gap-4 pr-2">
+          {
+            socialItems.map((item) => (
+              <a href={item.url} class="text-gray-400 hover:text-gray-900">
+                <Icon name={item.icon} class="w-6 h-6" />
+                <span class="sr-only">{item.title}</span>
+              </a>
+            ))
+          }
+        </div>
+        <div class="md:hidden flex">
+          <button
+            data-menu-trigger
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="group"
+          >
+            <Icon
+              name="mdi:menu"
+              class="w-6 h-6 text-gray-500 group-aria-expanded:hidden block"
+            />
+            <Icon
+              name="mdi:close"
+              class="w-6 h-6 text-gray-500 group-aria-expanded:block hidden"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+    <div
+      id="mobile-menu"
+      aria-hidden="true"
+      class="aria-hidden:hidden w-screen h-screen z-10 fixed top-0 left-0 bg-white/90 backdrop-blur-sm"
+    >
+      <div class="flex flex-col items-center h-full pt-30">
+        <div class="flex flex-col gap-6 items-center">
+          {
+            navigationItems.map((item) => (
+              <a
+                href={item.url}
+                class="text-gray-500 hover:text-gray-900 transition"
+              >
+                {item.title}
+              </a>
+            ))
+          }
+        </div>
+        <div class="flex gap-4 pt-8">
+          {
+            socialItems.map((item) => (
+              <a href={item.url} class="text-gray-400 hover:text-gray-900">
+                <Icon name={item.icon} class="w-6 h-6" />
+                <span class="sr-only">{item.title}</span>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll("[data-menu-trigger]");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      button.setAttribute(
+        "aria-expanded",
+        button.getAttribute("aria-expanded") === "true" ? "false" : "true",
+      );
+      const controlElementId = button.getAttribute("aria-controls");
+      if (controlElementId) {
+        const menu = document.getElementById(controlElementId);
+        if (menu) {
+          menu.setAttribute(
+            "aria-hidden",
+            menu.getAttribute("aria-hidden") === "true" ? "false" : "true",
+          );
+        }
+      }
+    });
+  });
+</script>

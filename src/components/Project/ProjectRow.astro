@@ -1,0 +1,45 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  title: string;
+  description?: string;
+  image: ImageMetadata;
+  logo?: ImageMetadata;
+  tags?: string[];
+}
+
+const { title, description, tags, image, logo } = Astro.props;
+---
+
+<div class="py-6 flex gap-x-6">
+  <div class="flex-1">
+    <h3 class="text-xl font-semibold mb-3">
+      <span class="text-gray-900">{title}</span>
+      <span class="text-gray-400 ml-2">2024</span>
+    </h3>
+
+    {
+      tags && (
+        <div class="flex gap-3 mb-4">
+          {tags?.map((tag) => (
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 font-medium text-gray-700 text-xs">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )
+    }
+
+    <p class="text-gray-600 leading-relaxed max-w-xl text-sm">
+      {description}
+    </p>
+  </div>
+  <div>
+    <Image
+      src={image}
+      alt={title}
+      class="w-full h-42 object-cover rounded-xl bg-gray-100"
+    />
+  </div>
+</div>

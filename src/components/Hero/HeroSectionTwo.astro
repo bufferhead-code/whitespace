@@ -1,0 +1,36 @@
+---
+import { Image } from "astro:assets";
+import headerPortrait from "../../assets/header_portrait.png";
+import ButtonPrimary from "../Button/ButtonPrimary.astro";
+import ButtonSecondary from "../Button/ButtonSecondary.astro";
+import BackgroundGradient from "../Common/Background/BackgroundGradient.astro";
+---
+
+<div class="container mx-auto isolate px-6 pb-12 pt-14 md:pt-24 relative">
+  <BackgroundGradient class="right-[-25%] top-[-25%] max-w-4xl" />
+
+  <div class="w-full max-w-2x">
+    <div class="flex flex-col items-start">
+      <div class="w-26 h-26 rounded-full overflow-hidden p-1.5 shadow-lg">
+        <Image
+          src={headerPortrait}
+          alt="A portrait picture"
+          class="rounded-full w-full h-full object-cover"
+        />
+      </div>
+
+      <div class="pt-4">
+        <h1 class="text-4xl font-bold text-gray-900">John Doe</h1>
+        <h2 class="text-2xl text-gray-600 font-semibold">
+          Webdeveloper & Webdesigner
+        </h2>
+      </div>
+
+      <p class="text-gray-600 max-w-xl pt-3">
+        Occaecat elit eiusmod est ut eiusmod exercitation dolore consectetur.
+        Laboris sint veniam enim sit enim mollit veniam incididunt consequat
+        irure officia excepteur cillum incididunt duis.
+      </p>
+    </div>
+  </div>
+</div>
