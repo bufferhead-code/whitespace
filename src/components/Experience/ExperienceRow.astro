@@ -10,14 +10,14 @@ interface Props {
 const { timeFrame, title, image } = Astro.props;
 ---
 
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-8">
   <!-- Left column with heading -->
   <div class="lg:col-span-3">
     <h2 class="font-medium tracking-tight text-gray-600">{timeFrame}</h2>
   </div>
 
   <div class="lg:col-span-9">
-    <div class="flex space-x-4 mb-2">
+    <div class="flex-col lg:flex-row flex gap-4 mb-2">
       {
         image && (
           <Image

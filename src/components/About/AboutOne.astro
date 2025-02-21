@@ -8,13 +8,13 @@ import AboutCard from "./AboutCard.astro";
   <div class="grid lg:grid-cols-2 relative gap-12 items-start">
     <!-- Left Column -->
     <div class="space-y-8 flex flex-col justify-between h-full">
-      <h1 class="text-4xl max-w-xl font-semibold leading-tight">
+      <h1 class="text-xl lg:text-4xl max-w-xl font-semibold leading-tight">
         I am a fullstack web developer who crafts exceptional web experiences.
       </h1>
       <div>
         <a
           href="#work"
-          class="inline-block text-indigo-600 hover:border-gray-400 transition hover:text-indigo-700 border-b-2 border-gray-300 text-lg font-semibold"
+          class="inline-block text-indigo-600 hover:border-gray-400 transition hover:text-indigo-700 border-b-2 border-gray-300 text-base lg:text-lg font-semibold"
         >
           Check out my work
         </a>
@@ -24,7 +24,7 @@ import AboutCard from "./AboutCard.astro";
     <!-- Right Column -->
     <div class="grid gap-6">
       <!-- Stats Grid -->
-      <div class="grid grid-cols-2 gap-6">
+      <div class="grid lg:grid-cols-2 gap-6">
         <!-- Projects Card -->
         <AboutCard icon="mdi:cube" title="Completed Projects" count="100+" />
         <AboutCard
