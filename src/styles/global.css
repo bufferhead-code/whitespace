@@ -10,6 +10,17 @@
   @apply max-w-6xl px-4 sm:px-6;
 }
 
+@layer base {
+  summary {
+    @apply list-none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
+
 html,
 body {
   margin: 0;
