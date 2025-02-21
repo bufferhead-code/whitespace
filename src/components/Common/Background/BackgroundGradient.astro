@@ -1,56 +1,16 @@
 ---
 interface Props {
-  class?: string;
+    class?: string;
 }
-import { twMerge } from "tailwind-merge";
+import {twMerge} from "tailwind-merge";
+import {Image} from "astro:assets";
 
-const { class: className } = Astro.props;
+const {class: className} = Astro.props;
+
+
+import backgroundImage from "../../../assets/background.png";
 ---
 
-<svg
-  class={twMerge("absolute pointer-events-none", className)}
-  viewBox="0 0 971 999"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <g clip-path="url(#clip0_380_9)">
-    <g filter="url(#filter0_f_380_9)">
-      <path
-        d="M386.102 762.535C469.553 762.535 537.204 694.884 537.204 611.433C537.204 527.982 469.553 460.331 386.102 460.331C302.651 460.331 235 527.982 235 611.433C235 694.884 302.651 762.535 386.102 762.535Z"
-        fill="#FEBE58"
-        fill-opacity="0.25"></path>
-      <path
-        d="M392.238 471.204C475.689 471.204 543.34 403.553 543.34 320.102C543.34 236.651 475.689 169 392.238 169C308.787 169 241.136 236.651 241.136 320.102C241.136 403.553 308.787 471.204 392.238 471.204Z"
-        fill="#DE2BAE"
-        fill-opacity="0.25"></path>
-      <path
-        d="M565.898 617.218C649.349 617.218 717 549.567 717 466.116C717 382.665 649.349 315.014 565.898 315.014C482.447 315.014 414.796 382.665 414.796 466.116C414.796 549.567 482.447 617.218 565.898 617.218Z"
-        fill="#24EDFF"
-        fill-opacity="0.25"></path>
-    </g>
-  </g>
-  <defs>
-    <filter
-      id="filter0_f_380_9"
-      x="47.7759"
-      y="-18.2241"
-      width="856.448"
-      height="967.983"
-      filterUnits="userSpaceOnUse"
-      color-interpolation-filters="sRGB"
-    >
-      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
-      <feBlend
-        mode="normal"
-        in="SourceGraphic"
-        in2="BackgroundImageFix"
-        result="shape"></feBlend>
-      <feGaussianBlur
-        stdDeviation="93.6121"
-        result="effect1_foregroundBlur_380_9"></feGaussianBlur>
-    </filter>
-    <clipPath id="clip0_380_9">
-      <rect width="971" height="999" fill="white"></rect>
-    </clipPath>
-  </defs>
-</svg>
+<Image src={backgroundImage} alt="Background Image"
+       class={twMerge("absolute pointer-events-none", className)}
+></Image>
