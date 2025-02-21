@@ -6,53 +6,53 @@ import ButtonPrimary from "../Button/ButtonPrimary.astro";
 import SectionTitle from "../Common/SectionTitle.astro";
 ---
 
-<<div></div>
-class="container mx-auto border-t border-gray-200 pt-6 pb-10 relative isolate" >
-<BackgroundGradient class="max-w-3xl left-0 top-0" />
-<div class="grid md:grid-cols-2 gap-12 z-10 relative">
-  <!-- Left Column - Contact Information -->
-  <div class="space-y-8">
-    <SectionTitle class="mb-4">Contact me</SectionTitle>
+<div class="container mx-auto border-t border-gray-200 pt-6 pb-10 relative isolate">
+    <BackgroundGradient class="max-w-3xl left-0 top-0"/>
+    <div class="grid md:grid-cols-2 gap-12 z-10 relative">
+        <!-- Left Column - Contact Information -->
+        <div class="space-y-8">
+            <SectionTitle class="mb-4">Contact me</SectionTitle>
 
-    <div class="grid md:grid-cols-2 gap-8">
-      <div>
-        <h2 class="text-sm font-medium text-gray-500">Phone</h2>
-        <p class="text-gray-900">+123 456 7890</p>
-      </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h2 class="text-sm font-medium text-gray-500">Phone</h2>
+                    <p class="text-gray-900">+123 456 7890</p>
+                </div>
 
-      <div>
-        <h2 class="text-sm font-medium text-gray-500">Email</h2>
-        <p class="text-gray-900">joe@acme.com</p>
-      </div>
+                <div>
+                    <h2 class="text-sm font-medium text-gray-500">Email</h2>
+                    <p class="text-gray-900">joe@acme.com</p>
+                </div>
 
-      <div>
-        <h2 class="text-sm font-medium text-gray-500">Address</h2>
-        <div class="text-gray-900">
-          <p>Main Street 123</p>
-          <p>Anytown</p>
-          <p>World</p>
+                <div>
+                    <h2 class="text-sm font-medium text-gray-500">Address</h2>
+                    <div class="text-gray-900">
+                        <p>Main Street 123</p>
+                        <p>Anytown</p>
+                        <p>World</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+
+        <!-- Right Column - Contact Form -->
+        <div class="space-y-6">
+            <p class="text-gray-600">
+                Let's collaborate! Whether you need a developer, designer, or creative
+                mind, I'm here to help.
+            </p>
+
+            <form class="space-y-3">
+                <FormInputField label="Name" name="name"/>
+
+                <FormInputField label="Email" name="email"/>
+
+                <FormInputField label="Subject" name="subject"/>
+
+                <FormInputTextarea label="Message" name="message"/>
+
+                <ButtonPrimary> Send</ButtonPrimary>
+            </form>
+        </div>
     </div>
-  </div>
-
-  <!-- Right Column - Contact Form -->
-  <div class="space-y-6">
-    <p class="text-gray-600">
-      Let's collaborate! Whether you need a developer, designer, or creative
-      mind, I'm here to help.
-    </p>
-
-    <form class="space-y-3">
-      <FormInputField label="Name" name="name" />
-
-      <FormInputField label="Email" name="email" />
-
-      <FormInputField label="Subject" name="subject" />
-
-      <FormInputTextarea label="Message" name="message" />
-
-      <ButtonPrimary> Send </ButtonPrimary>
-    </form>
-  </div>
 </div>
