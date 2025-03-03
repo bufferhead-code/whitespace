@@ -7,6 +7,10 @@ export const navigationItems = [
     title: "Home 3",
     url: "/home-3",
   },
+  {
+    title: "Projects",
+    url: "/projects",
+  },
 ];
 
 export const socialItems = [

@@ -6,11 +6,12 @@ import { Icon } from "astro-icon/components";
 interface Props {
   title: string;
   description?: string;
+  slug: string;
   image: ImageMetadata;
   logo?: ImageMetadata;
 }
 
-const { title, description, image, logo } = Astro.props;
+const { title, description, image, logo, slug } = Astro.props;
 ---
 
 <div>
@@ -21,7 +22,7 @@ const { title, description, image, logo } = Astro.props;
       <div
         class="backdrop-blur-xs absolute w-full h-full duration-300 opacity-0 group-hover:opacity-100 flex items-center justify-center bg-white/30"
       >
-        <ButtonSecondary>
+        <ButtonSecondary tag="a" href={`/projects/${slug}`}>
           <div class="flex items-center font-medium gap-0.5">
             <span>See Project</span>
             <Icon name="mdi:external-link" class="w-4 text-gray-500 h-4 ml-1" />
@@ -31,7 +32,7 @@ const { title, description, image, logo } = Astro.props;
       <Image
         src={image}
         alt={title}
-        class="w-full h-64 object-cover transition duration-500"
+        class="w-full h-64 object-cover transition duration-500 object-top"
       />
     </div>
     {

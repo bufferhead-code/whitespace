@@ -6,18 +6,12 @@ interface Props {
   target?: string;
 }
 
-const {
-  class: className,
-  tag = "button",
-  href,
-  target = "_blank",
-  ...props
-} = Astro.props;
+const { class: className, tag = "button", href, ...props } = Astro.props;
 ---
 
 {
   tag === "a" ? (
-    <a href={href} class:list={className} target={target} {...props}>
+    <a href={href} class:list={className} {...props}>
       <slot />
     </a>
   ) : (

@@ -1,40 +1,27 @@
 ---
 import ProjectCard from "./ProjectCard.astro";
 import ButtonSecondary from "../Button/ButtonSecondary.astro";
-import exampleImage from "@assets/placeholder/project_example.png";
-import exampleLogo from "@assets/placeholder/project_logo.svg";
+import { getCollection } from "astro:content";
+
+const allProjects = await getCollection("projects");
+// sort by priority
+allProjects.sort((a, b) => b.data.priority - a.data.priority);
 ---
 
 <section class="container mx-auto pt-8 pb-12 border-t border-gray-200 isolate">
   <!-- Projects grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-    <ProjectCard
-      title="Frontend Development"
-      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
-      logo={exampleLogo}
-      image={exampleImage}
-    />
-
-    <ProjectCard
-      title="Frontend Development"
-      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
-      logo={exampleLogo}
-      image={exampleImage}
-    />
-
-    <ProjectCard
-      title="Frontend Development"
-      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
-      logo={exampleLogo}
-      image={exampleImage}
-    />
-
-    <ProjectCard
-      title="Frontend Development"
-      description="I've worked on many projects over my 10+ years in the industry, creating innovative solutions for various companies."
-      logo={exampleLogo}
-      image={exampleImage}
-    />
+    {
+      allProjects.map((project) => (
+        <ProjectCard
+          title={project.data.title}
+          description={project.data.description}
+          slug={project.id}
+          logo={project.data.logo}
+          image={project.data.image}
+        />
+      ))
+    }
   </div>
 
   <!-- See all projects button -->
