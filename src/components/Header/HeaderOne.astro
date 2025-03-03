@@ -1,41 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import headerPortrait from "@assets/header_portrait.png";
-
-const navigationItems = [
-  {
-    title: "Home 2",
-    url: "/home-2",
-  },
-  {
-    title: "Home 3",
-    url: "/home-3",
-  },
-];
-
-const socialItems = [
-  {
-    title: "Github",
-    url: "#",
-    icon: "mdi:github",
-  },
-  {
-    title: "Dribbble",
-    url: "#",
-    icon: "mdi:dribbble",
-  },
-  {
-    title: "Instagram",
-    url: "#",
-    icon: "mdi:instagram",
-  },
-  {
-    title: "Linkedin",
-    url: "#",
-    icon: "mdi:linkedin",
-  },
-];
+import { navigationItems, socialItems } from "../../config/navigation";
 ---
 
 <div class="w-full h-10">

@@ -13,6 +13,7 @@ const { label, name } = Astro.props;
   >
   <textarea
     id={name}
+    aria-labelledby={name}
     name={name}
     rows="6"
     class="mt-1 py-1.5 px-2.5 block w-full bg-white rounded-md border border-gray-200 shadow-xs focus:border-indigo-500 focus:ring-indigo-500"

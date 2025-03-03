@@ -12,7 +12,7 @@ interface Props {
 const { title, open, prefix, class: className, icon } = Astro.props;
 ---
 
-<details open={open} class={twMerge("pt-2", className)}>
+<details open={open} class:list={twMerge("pt-2", className)}>
   <summary
     class="w-full flex items-center justify-between text-left cursor-pointer"
   >

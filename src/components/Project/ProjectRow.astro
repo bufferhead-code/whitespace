@@ -5,11 +5,10 @@ interface Props {
   title: string;
   description?: string;
   image: ImageMetadata;
-  logo?: ImageMetadata;
   tags?: string[];
 }
 
-const { title, description, tags, image, logo } = Astro.props;
+const { title, description, tags, image } = Astro.props;
 ---
 
 <div class="py-6 flex flex-col-reverse md:flex-row gap-4 md:gap-6">

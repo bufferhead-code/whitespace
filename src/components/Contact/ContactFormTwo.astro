@@ -1,12 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import FormInputField from "../Common/Form/FormInputField.astro";
-import BackgroundGradient from "../Common/Background/BackgroundGradient.astro";
 import FormInputTextarea from "../Common/Form/FormInputTextarea.astro";
 import ButtonPrimary from "../Button/ButtonPrimary.astro";
-import SectionTitle from "../Common/SectionTitle.astro";
 import servicesExampleImage from "@assets/placeholder/services_example.jpg";
 import { Icon } from "astro-icon/components";
+import { socialItems } from "../../config/navigation";
 ---
 
 <div
@@ -29,18 +28,13 @@ import { Icon } from "astro-icon/components";
         consectetur duis.
       </p>
       <div class="flex space-x-4 mb-6">
-        <a href="#" class="text-gray-400 hover:text-gray-600">
-          <Icon name="mdi:github" class="w-6 h-6" />
-        </a>
-        <a href="#" class="text-gray-400 hover:text-gray-600">
-          <Icon name="mdi:dribbble" class="w-6 h-6" />
-        </a>
-        <a href="#" class="text-gray-400 hover:text-gray-600">
-          <Icon name="mdi:instagram" class="w-6 h-6" />
-        </a>
-        <a href="#" class="text-gray-400 hover:text-gray-600">
-          <Icon name="mdi:linkedin" class="w-6 h-6" />
-        </a>
+        {
+          socialItems.map((item) => (
+            <a href={item.url} class="text-gray-400 hover:text-gray-600">
+              <Icon name={item.icon} class="w-6 h-6" />
+            </a>
+          ))
+        }
       </div>
       <form class="space-y-3">
         <FormInputField label="Name" name="name" />
@@ -49,7 +43,7 @@ import { Icon } from "astro-icon/components";
 
         <FormInputTextarea label="Message" name="message" />
 
-        <ButtonPrimary> Send </ButtonPrimary>
+        <ButtonPrimary> Send</ButtonPrimary>
       </form>
     </div>
   </div>

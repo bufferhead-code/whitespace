@@ -1,16 +1,17 @@
 ---
 interface Props {
-    class?: string;
+  class?: string;
 }
-import {twMerge} from "tailwind-merge";
-import {Image} from "astro:assets";
+import { twMerge } from "tailwind-merge";
+import { Image } from "astro:assets";
 
-const {class: className} = Astro.props;
-
+const { class: className } = Astro.props;
 
 import backgroundImage from "../../../assets/background.png";
 ---
 
-<Image src={backgroundImage} alt="Background Image"
-       class={twMerge("absolute pointer-events-none", className)}
-></Image>
+<Image
+  src={backgroundImage}
+  alt="Background Image"
+  class:list={twMerge("absolute pointer-events-none select-none", className)}
+/>

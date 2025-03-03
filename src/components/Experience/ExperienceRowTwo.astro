@@ -3,12 +3,12 @@ import { Image } from "astro:assets";
 
 interface Props {
   timeFrame?: string;
-  role: string;
+  position: string;
   company: string;
   image?: ImageMetadata;
 }
 
-const { timeFrame, role, company, image } = Astro.props;
+const { timeFrame, position, company, image } = Astro.props;
 ---
 
 <div
@@ -24,7 +24,7 @@ const { timeFrame, role, company, image } = Astro.props;
     )
   }
   <div class="w-full">
-    <h3 class="font-semibold">{role}</h3>
+    <h3 class="font-semibold">{position}</h3>
     <div>
       <div class="flex justify-between items-center text-sm text-gray-500">
         <span class="font-semibold">{company}</span>

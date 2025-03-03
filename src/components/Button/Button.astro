@@ -11,16 +11,17 @@ const {
   tag = "button",
   href,
   target = "_blank",
+  ...props
 } = Astro.props;
 ---
 
 {
   tag === "a" ? (
-    <a href={href} class={className} target={target}>
+    <a href={href} class:list={className} target={target} {...props}>
       <slot />
     </a>
   ) : (
-    <button class={className}>
+    <button class:list={className} {...props}>
       <slot />
     </button>
   )
