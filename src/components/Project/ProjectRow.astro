@@ -14,15 +14,15 @@ const { title, description, tags, image } = Astro.props;
 <div class="py-6 flex flex-col-reverse md:flex-row gap-4 md:gap-6">
   <div class="flex-1">
     <h3 class="text-xl font-semibold mb-3">
-      <span class="text-gray-900">{title}</span>
-      <span class="text-gray-400 ml-2">2024</span>
+      <span class="text-base-900">{title}</span>
+      <span class="text-base-400 ml-2">2024</span>
     </h3>
 
     {
       tags && (
         <div class="flex gap-3 mb-4">
           {tags?.map((tag) => (
-            <span class="px-3 py-1.5 rounded-full bg-gray-100 font-medium text-gray-700 text-xs">
+            <span class="px-3 py-1.5 rounded-full bg-base-100 font-medium text-base-700 text-xs">
               {tag}
             </span>
           ))}
@@ -30,7 +30,7 @@ const { title, description, tags, image } = Astro.props;
       )
     }
 
-    <p class="text-gray-600 leading-relaxed max-w-xl text-sm">
+    <p class="text-base-600 leading-relaxed max-w-xl text-sm">
       {description}
     </p>
   </div>
@@ -38,7 +38,7 @@ const { title, description, tags, image } = Astro.props;
     <Image
       src={image}
       alt={title}
-      class="w-full h-60 md:h-42 object-cover rounded-xl bg-gray-100"
+      class="w-full h-60 md:h-42 object-cover rounded-xl bg-base-100"
     />
   </div>
 </div>

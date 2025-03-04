@@ -13,7 +13,7 @@ const { timeFrame, title, image } = Astro.props;
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-2 lg:gap-8">
   <!-- Left column with heading -->
   <div class="lg:col-span-3">
-    <h2 class="font-medium tracking-tight text-gray-600">{timeFrame}</h2>
+    <h2 class="font-medium tracking-tight text-base-600">{timeFrame}</h2>
   </div>
 
   <div class="lg:col-span-9">
@@ -23,13 +23,13 @@ const { timeFrame, title, image } = Astro.props;
           <Image
             src={image}
             alt={title}
-            class="w-12 h-12 p-2 shadow-xs border border-gray-200 rounded-lg"
+            class="w-12 h-12 p-2 shadow-xs border border-base-200 rounded-lg"
           />
         )
       }
       <div class="space-y-0.5 flex-1">
         <h3 class="font-semibold">{title}</h3>
-        <div class="text-gray-600 max-w-2xl prose prose-sm">
+        <div class="text-base-600 max-w-2xl prose prose-sm">
           <slot />
         </div>
       </div>

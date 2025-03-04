@@ -9,7 +9,7 @@ const allProjects = await getCollection("projects");
 allProjects.sort((a, b) => b.data.priority - a.data.priority);
 ---
 
-<section class="container mx-auto pt-6 pb-12 border-t border-gray-200 isolate">
+<section class="container mx-auto pt-6 pb-12 border-t border-base-200 isolate">
   <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
     <!-- Left column with heading -->
     <div class="lg:col-span-3">

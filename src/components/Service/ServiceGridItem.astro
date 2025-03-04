@@ -14,14 +14,14 @@ const { title, icon } = Astro.props;
     {
       icon && (
         <div class="relative">
-          <div class="absolute -inset-1 rounded-full shadow-xs border border-indigo-300 bg-indigo-50/50" />
-          <Icon name={icon} class="w-6 h-6 text-indigo-400 p-0.5 relative" />
+          <div class="absolute -inset-1 rounded-full shadow-xs border border-primary-300 bg-primary-50/50" />
+          <Icon name={icon} class="w-6 h-6 text-primary-400 p-0.5 relative" />
         </div>
       )
     }
     <h3 class="text-lg font-semibold">{title}</h3>
   </div>
-  <div class="text-gray-600 text-sm font-medium max-w-md">
+  <div class="text-base-600 text-sm font-medium max-w-md">
     <slot />
   </div>
 </div>

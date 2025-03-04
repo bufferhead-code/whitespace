@@ -5,21 +5,21 @@ import { Icon } from "astro-icon/components";
 
 <div class="w-full h-8">
   <div
-    class="w-full fixed flex justify-center border-gray-200 border-b isolate z-30 bg-white/80 backdrop-blur-lg"
+    class="w-full fixed flex justify-center border-base-200 border-b isolate z-30 bg-white/80 backdrop-blur-lg"
   >
     <header class="mx-auto px-5 py-3.5 container w-full rounded-xl">
       <nav class="w-full flex items-center justify-between">
         <div class="hidden md:flex items-center text-sm gap-6 font-medium">
           <a
             href="/"
-            class="text-gray-700 hover:text-gray-900 transition font-semibold border-r text-lg border-gray-200 pr-6 py-0.5"
+            class="text-base-700 hover:text-base-900 transition font-semibold border-r text-lg border-base-200 pr-6 py-0.5"
             >WHITESPACE</a
           >
           {
             navigationItems.map((item) => (
               <a
                 href={item.url}
-                class="text-gray-500 hover:text-gray-900 transition"
+                class="text-base-500 hover:text-base-900 transition"
               >
                 {item.title}
               </a>
@@ -30,7 +30,7 @@ import { Icon } from "astro-icon/components";
         <div class="flex items-center gap-4 pr-2">
           {
             socialItems.map((item) => (
-              <a href={item.url} class="text-gray-400 hover:text-gray-900">
+              <a href={item.url} class="text-base-400 hover:text-base-900">
                 <Icon name={item.icon} class="w-5 h-5" />
                 <span class="sr-only">{item.title}</span>
               </a>

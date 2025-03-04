@@ -6,13 +6,13 @@ import { navigationItems, socialItems } from "../../config/navigation";
 <div class="w-full h-10">
   <div class="w-full flex py-6 justify-center px-12 isolate relative z-30">
     <header
-      class="mx-auto fixed px-5 container py-3 w-[95%] md:w-full rounded-xl shadow-xs z-20 border border-gray-200 bg-white/90 backdrop-blur-lg"
+      class="mx-auto fixed px-5 container py-3 w-[95%] md:w-full rounded-xl shadow-xs z-20 border border-base-200 bg-white/90 backdrop-blur-lg"
     >
       <nav class="w-full flex items-center justify-between">
         <div class="flex gap-4">
           <a
             href="/"
-            class="text-gray-700 hover:text-gray-900 transition font-semibold md:border-r text-lg border-gray-200 pr-6 py-0.5"
+            class="text-base-700 hover:text-base-900 transition font-semibold md:border-r text-lg border-base-200 pr-6 py-0.5"
             >WHITESPACE</a
           >
           <div class="hidden md:flex items-center text-sm gap-1.5 font-medium">
@@ -23,21 +23,21 @@ import { navigationItems, socialItems } from "../../config/navigation";
                     <>
                       <button
                         class:list={[
-                          `text-gray-500 hover:text-gray-900 transition group-hover:bg-gray-50 cursor-pointer rounded-lg px-2.5 py-1.5 transition`,
+                          `text-base-500 hover:text-base-900 transition group-hover:bg-base-50 cursor-pointer rounded-lg px-2.5 py-1.5 transition`,
                           { "flex items-center": item.items },
                         ]}
                       >
                         <span>{item.title}</span>
                         <Icon
                           name="mdi:chevron-down"
-                          class="text-gray-300 relative -right-1 group-hover:text-gray-500 transition w-5 h-5"
+                          class="text-base-300 relative -right-1 group-hover:text-base-500 transition w-5 h-5"
                         />
                       </button>
                       <div class="absolute left-0 hidden w-max group-hover:block bg-white shadow-lg pt-2 rounded-md">
                         {item.items.map((subItem) => (
                           <a
                             href={subItem.url}
-                            class="block px-4 py-2 text-gray-500 hover:text-gray-900 transition"
+                            class="block px-4 py-2 text-base-500 hover:text-base-900 transition"
                           >
                             {subItem.title}
                           </a>
@@ -48,7 +48,7 @@ import { navigationItems, socialItems } from "../../config/navigation";
                     <a
                       href={item.url}
                       class:list={[
-                        `text-gray-500 rounded-lg group-hover:bg-gray-50 px-2.5 py-1.5 transition hover:text-gray-900 transition`,
+                        `text-base-500 rounded-lg group-hover:bg-base-50 px-2.5 py-1.5 transition hover:text-base-900 transition`,
                         { "flex items-center": item.items },
                       ]}
                     >
@@ -63,7 +63,7 @@ import { navigationItems, socialItems } from "../../config/navigation";
         <div class="hidden md:flex items-center gap-4 pr-2">
           {
             socialItems.map((item) => (
-              <a href={item.url} class="text-gray-400 hover:text-gray-900">
+              <a href={item.url} class="text-base-400 hover:text-base-900">
                 <Icon name={item.icon} class="w-6 h-6" />
                 <span class="sr-only">{item.title}</span>
               </a>
@@ -79,11 +79,11 @@ import { navigationItems, socialItems } from "../../config/navigation";
           >
             <Icon
               name="mdi:menu"
-              class="w-6 h-6 text-gray-500 group-aria-expanded:hidden block"
+              class="w-6 h-6 text-base-500 group-aria-expanded:hidden block"
             />
             <Icon
               name="mdi:close"
-              class="w-6 h-6 text-gray-500 group-aria-expanded:block hidden"
+              class="w-6 h-6 text-base-500 group-aria-expanded:block hidden"
             />
           </button>
         </div>
@@ -101,14 +101,14 @@ import { navigationItems, socialItems } from "../../config/navigation";
               <div>
                 {item.items && item.items.length > 0 ? (
                   <>
-                    <span class="font-semibold text-sm text-gray-400">
+                    <span class="font-semibold text-sm text-base-400">
                       {item.title}
                     </span>
                     <div class="">
                       {item.items.map((subItem) => (
                         <a
                           href={subItem.url}
-                          class="text-gray-700 hover:text-gray-900 transition block font-medium"
+                          class="text-base-700 hover:text-base-900 transition block font-medium"
                         >
                           {subItem.title}
                         </a>
@@ -118,7 +118,7 @@ import { navigationItems, socialItems } from "../../config/navigation";
                 ) : (
                   <a
                     href={item.url}
-                    class="text-gray-700 hover:text-gray-900 transition font-medium block"
+                    class="text-base-700 hover:text-base-900 transition font-medium block"
                   >
                     {item.title}
                   </a>
@@ -130,7 +130,7 @@ import { navigationItems, socialItems } from "../../config/navigation";
         <div class="flex gap-4 pt-8 mx-auto">
           {
             socialItems.map((item) => (
-              <a href={item.url} class="text-gray-400 hover:text-gray-900">
+              <a href={item.url} class="text-base-400 hover:text-base-900">
                 <Icon name={item.icon} class="w-6 h-6" />
                 <span class="sr-only">{item.title}</span>
               </a>

@@ -17,7 +17,7 @@ const { title, open, prefix, class: className, icon } = Astro.props;
     class="w-full flex items-center justify-between text-left cursor-pointer"
   >
     <div class="flex items-center gap-4">
-      {icon && <Icon name={icon} class="h-7 w-7 text-indigo-500" />}
+      {icon && <Icon name={icon} class="h-7 w-7 text-primary-500" />}
       {
         prefix && (
           <span class="text-[#6366F1] text-2xl font-semibold min-w-[35px]">
@@ -28,7 +28,7 @@ const { title, open, prefix, class: className, icon } = Astro.props;
       <span class="text-2xl font-semibold">{title}</span>
     </div>
     <svg
-      class="w-6 h-6 text-gray-400"
+      class="w-6 h-6 text-base-400"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"

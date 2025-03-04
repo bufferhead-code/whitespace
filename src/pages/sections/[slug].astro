@@ -27,7 +27,7 @@ export async function getStaticPaths() {
       >
         {category.title}
       </h1>
-      <p class="text-gray-600 text-sm md:text-base font-medium max-w-md">
+      <p class="text-base-600 text-sm md:text-base font-medium max-w-md">
         This page lists all available {category.title} components that you can use
         withing the Whitespace theme.
       </p>
@@ -35,12 +35,12 @@ export async function getStaticPaths() {
     <div class="grid grid-cols-1 gap-8 mb-12">
       {
         category.components.map((component) => (
-          <div class="border border-gray-200 rounded-lg overflow-hidden">
-            <div class="flex space-x-2 bg-gray-50 items-center justify-between border-b border-gray-200  py-1.5 px-3">
+          <div class="border border-base-200 rounded-lg overflow-hidden">
+            <div class="flex space-x-2 bg-base-50 items-center justify-between border-b border-base-200  py-1.5 px-3">
               <h2 class="font-semibold text-lg py-1.5 px-2">
                 {component.title}
               </h2>
-              <div class="bg-gray-100 border border-gray-200 rounded font-mono text-gray-700 text-xs px-2 py-1 font-semibold">
+              <div class="bg-base-100 border border-base-200 rounded font-mono text-base-700 text-xs px-2 py-1 font-semibold">
                 {component.path}
               </div>
             </div>

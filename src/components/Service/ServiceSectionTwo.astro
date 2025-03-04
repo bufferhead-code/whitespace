@@ -4,11 +4,11 @@ import servicesExampleImage from "@assets/placeholder/services_example.jpg";
 import ServiceAccordionItem from "./ServiceAccordionItem.astro";
 ---
 
-<div class="container mx-auto px-4 py-10 border-t border-gray-200">
+<div class="container mx-auto px-4 py-10 border-t border-base-200">
   <!-- Header Section -->
   <div class="text-center mb-10">
     <h1 class="text-3xl font-bold mb-1.5">My Services</h1>
-    <p class="text-gray-500 max-w-md mx-auto font-medium">
+    <p class="text-base-500 max-w-md mx-auto font-medium">
       Lorem aliquip sit consequat tempor voluptate cupidatat elit cillum
       consectetur duis.
     </p>
@@ -20,35 +20,35 @@ import ServiceAccordionItem from "./ServiceAccordionItem.astro";
     <Image
       src={servicesExampleImage}
       alt="Working on providing services"
-      class="bg-gray-100 aspect-4/3 object-cover rounded-lg h-full"
+      class="bg-base-100 aspect-4/3 object-cover rounded-lg h-full"
     />
 
     <!-- Right Column - Terminal Items -->
     <div class="space-y-4">
       <ServiceAccordionItem
         open
-        class="border border-gray-200 rounded-xl py-3 px-4"
+        class="border border-base-200 rounded-xl py-3 px-4"
         title="Backend"
         icon="mdi:terminal"
       >
         <p>Here is the content!</p>
       </ServiceAccordionItem>
       <ServiceAccordionItem
-        class="border border-gray-200 rounded-xl py-3 px-4"
+        class="border border-base-200 rounded-xl py-3 px-4"
         title="Frontend"
         icon="mdi:devices"
       >
         <p>Here is the content!</p>
       </ServiceAccordionItem>
       <ServiceAccordionItem
-        class="border border-gray-200 rounded-xl py-3 px-4"
+        class="border border-base-200 rounded-xl py-3 px-4"
         title="Design"
         icon="mdi:design"
       >
         <p>Here is the content!</p>
       </ServiceAccordionItem>
       <ServiceAccordionItem
-        class="border border-gray-200 rounded-xl py-3 px-4"
+        class="border border-base-200 rounded-xl py-3 px-4"
         title="Hosting"
         icon="mdi:server-outline"
       >

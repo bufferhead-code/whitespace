@@ -10,7 +10,7 @@ interface Props {
 const { name, position, image } = Astro.props;
 ---
 
-<div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-xs">
+<div class="rounded-2xl border border-base-200 bg-white p-8 shadow-xs">
   <div class="flex items-center gap-4">
     {
       image && (
@@ -23,11 +23,11 @@ const { name, position, image } = Astro.props;
     }
     <div>
       <h3 class="font-medium">{name}</h3>
-      <p class="text-gray-600 font-medium text-sm">{position}</p>
+      <p class="text-base-600 font-medium text-sm">{position}</p>
     </div>
   </div>
 
-  <p class="mt-6 text-gray-700">
+  <p class="mt-6 text-base-700">
     "Best expierence I've ever had working with a person ever. Like honestly how
     can you be such a perfect human being."
   </p>

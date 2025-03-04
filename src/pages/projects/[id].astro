@@ -34,7 +34,7 @@ const { Content } = await render(post);
         <div class="col-span-2 space-y-3 py-6">
           {
             post.data.year && (
-              <p class="font-semibold text-indigo-500">{post.data.year}</p>
+              <p class="font-semibold text-primary-500">{post.data.year}</p>
             )
           }
           <h1
@@ -42,16 +42,16 @@ const { Content } = await render(post);
           >
             {post.data.title}
           </h1>
-          <p class="text-gray-600 text-sm md:text-base font-medium max-w-xl">
+          <p class="text-base-600 text-sm md:text-base font-medium max-w-xl">
             {post.data.description}
           </p>
           <div>
             {
               post.data.tags && (
                 <div class="flex gap-3 mt-4 items-center">
-                  <div class="text-gray-500 font-semibold text-xs">Tags:</div>
+                  <div class="text-base-500 font-semibold text-xs">Tags:</div>
                   {post.data.tags.map((tag) => (
-                    <span class="px-3 py-1.5 rounded-full bg-gray-100 font-medium text-gray-700 text-xs">
+                    <span class="px-3 py-1.5 rounded-full bg-base-100 font-medium text-base-700 text-xs">
                       {tag}
                     </span>
                   ))}
@@ -64,11 +64,11 @@ const { Content } = await render(post);
           <Image
             src={post.data.image}
             alt={post.data.title}
-            class="w-full border border-gray-200 shadow-xs object-cover transition duration-500 object-top rounded-lg"
+            class="w-full border border-base-200 shadow-xs object-cover transition duration-500 object-top rounded-lg"
           />
         </div>
       </div>
-      <div class="prose prose-sm md:prose-base pt-8 border-t border-gray-200">
+      <div class="prose prose-sm md:prose-base pt-8 border-t border-base-200">
         <Content />
       </div>
     </div>

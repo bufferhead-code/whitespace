@@ -8,8 +8,8 @@ const allProjects = await getCollection("projects");
 allProjects.sort((a, b) => b.data.priority - a.data.priority);
 ---
 
-<section class="container mx-auto border-t border-gray-200 isolate">
-  <div class="divide-y divide-gray-200">
+<section class="container mx-auto border-t border-base-200 isolate">
+  <div class="divide-y divide-base-200">
     {
       allProjects.map((project) => (
         <ProjectRow

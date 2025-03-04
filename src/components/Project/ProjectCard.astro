@@ -17,7 +17,7 @@ const { title, description, image, logo, slug } = Astro.props;
 <div>
   <div class="relative">
     <div
-      class="border-gray-200 border shadow-xs relative bg-gray-100 group rounded-xl overflow-hidden"
+      class="border-base-200 border shadow-xs relative bg-base-100 group rounded-xl overflow-hidden"
     >
       <div
         class="backdrop-blur-xs absolute w-full h-full duration-300 opacity-0 group-hover:opacity-100 flex items-center justify-center bg-white/30"
@@ -25,7 +25,7 @@ const { title, description, image, logo, slug } = Astro.props;
         <ButtonSecondary tag="a" href={`/projects/${slug}`}>
           <div class="flex items-center font-medium gap-0.5">
             <span>See Project</span>
-            <Icon name="mdi:external-link" class="w-4 text-gray-500 h-4 ml-1" />
+            <Icon name="mdi:external-link" class="w-4 text-base-500 h-4 ml-1" />
           </div>
         </ButtonSecondary>
       </div>
@@ -37,12 +37,12 @@ const { title, description, image, logo, slug } = Astro.props;
     </div>
     {
       logo && (
-        <div class="rounded-lg absolute shadow-sm bg-white/60 backdrop-blur border-gray-300 border p-[3px] -bottom-6 right-5">
+        <div class="rounded-lg absolute shadow-sm bg-white/60 backdrop-blur border-base-300 border p-[3px] -bottom-6 right-5">
           <div class=" overflow-hidden aspect-square rounded h-13 w-13">
             <Image
               src={logo}
               alt={title + " Logo"}
-              class="w-full h-full  object-cover bg-gray-100 "
+              class="w-full h-full  object-cover bg-base-100 "
             />
           </div>
         </div>
@@ -51,7 +51,7 @@ const { title, description, image, logo, slug } = Astro.props;
   </div>
   <div class="px-2 py-3">
     <h3 class="text font-semibold mb-0.5">{title}</h3>
-    <p class="text-gray-500 font-medium text-sm">
+    <p class="text-base-500 font-medium text-sm">
       {description}
     </p>
   </div>
