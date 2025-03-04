@@ -12,9 +12,13 @@ interface Props {
 const { title, open, prefix, class: className, icon } = Astro.props;
 ---
 
-<details open={open} class:list={twMerge("pt-2", className)}>
-  <summary
-    class="w-full flex items-center justify-between text-left cursor-pointer"
+<bufferthemes-accordion>
+  <button
+    aria-expanded={open}
+    class:list={twMerge(
+      "py-2 w-full flex items-center justify-between text-left cursor-pointer",
+      className,
+    )}
   >
     <div class="flex items-center gap-4">
       {icon && <Icon name={icon} class="h-7 w-7 text-primary-500" />}
@@ -39,8 +43,55 @@ const { title, open, prefix, class: className, icon } = Astro.props;
         stroke-width="2"
         d="M19 9l-7 7-7-7"></path>
     </svg>
-  </summary>
-  <div class="pt-1.5 pl-13 pr-6 prose prose-sm">
-    <slot />
+  </button>
+  <div
+    data-content
+    class:list={[{ "max-h-0 opacity-0": !open }, "overflow-hidden"]}
+  >
+    <div class="pl-13 pr-6 prose prose-sm pb-4">
+      <slot />
+    </div>
   </div>
-</details>
+</bufferthemes-accordion>
+
+<script>
+  import { animate, press } from "motion";
+
+  class StarlightMenuButton extends HTMLElement {
+    btn = this.querySelector("button")!;
+    content = this.querySelector("[data-content]");
+
+    constructor() {
+      super();
+
+      press(this.btn, (el) => {
+        const isOpen = el.getAttribute("aria-expanded") === "true";
+        el.setAttribute("aria-expanded", !isOpen);
+
+        if (isOpen) {
+          this.animateCollapse(this.content);
+        } else {
+          this.animateExpand(this.content);
+        }
+      });
+    }
+
+    animateExpand(detail: HTMLElement) {
+      animate(
+        detail,
+        { maxHeight: [0, detail.scrollHeight + "px"], opacity: [0, 1] },
+        { duration: 0.3 },
+      );
+    }
+
+    animateCollapse(detail: HTMLElement) {
+      animate(
+        detail,
+        { maxHeight: [detail.scrollHeight + "px", "0"], opacity: [1, 0] },
+        { duration: 0.3 },
+      );
+    }
+  }
+
+  customElements.define("bufferthemes-accordion", StarlightMenuButton);
+</script>
