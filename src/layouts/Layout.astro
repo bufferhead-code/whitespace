@@ -5,6 +5,8 @@ import "@fontsource/inter/500.css";
 import "@fontsource/inter/600.css";
 import "@fontsource/inter/700.css";
 import HeaderOne from "../components/Header/HeaderOne.astro";
+import FooterOne from "../components/Footer/FooterOne.astro";
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -15,10 +17,12 @@ import HeaderOne from "../components/Header/HeaderOne.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Astro Basics</title>
+    <ClientRouter />
   </head>
   <body>
     <HeaderOne />
     <slot />
+    <FooterOne />
   </body>
 </html>
 
