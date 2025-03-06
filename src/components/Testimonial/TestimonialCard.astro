@@ -26,9 +26,7 @@ const { name, position, image } = Astro.props;
       <p class="text-base-600 font-medium text-sm">{position}</p>
     </div>
   </div>
-
-  <p class="mt-6 text-base-700">
-    "Best expierence I've ever had working with a person ever. Like honestly how
-    can you be such a perfect human being."
-  </p>
+  <div class="mt-6 text-base-700">
+    <slot />
+  </div>
 </div>
