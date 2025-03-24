@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import { getEntry, render } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import { Image } from "astro:assets";
+import { SEO } from "astro-seo";
 
 // 1. Get the slug from the incoming server request
 const { id } = Astro.params;
@@ -28,6 +29,13 @@ const { Content } = await render(post);
 ---
 
 <Layout>
+  <Fragment slot="head">
+    <SEO
+      description="Build Astro websites superfast, with easy to customize themes."
+      title={post.data.title + "Whitespace Project - Bufferthemes"}
+    />
+  </Fragment>
+
   <div class="container mx-auto py-24">
     <div class="flex-1 container mx-auto">
       <div class="grid grid-cols-1 md:grid-cols-3 items-center justify-between">

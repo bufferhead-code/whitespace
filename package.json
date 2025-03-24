@@ -19,6 +19,7 @@
     "astro": "^5.2.3",
     "astro-favicons": "^3.1.5",
     "astro-icon": "^1.1.5",
+    "astro-seo": "^0.8.4",
     "motion": "^12.4.10",
     "tailwind-merge": "^3.0.1",
     "tailwindcss": "^4.0.3"

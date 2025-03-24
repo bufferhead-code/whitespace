@@ -6,18 +6,20 @@ interface Props {
   description?: string;
   image: ImageMetadata;
   tags?: string[];
+  slug: string;
 }
 
-const { title, description, tags, image } = Astro.props;
+const { title, description, tags, image, slug } = Astro.props;
 ---
 
 <div class="py-6 flex flex-col-reverse md:flex-row gap-4 md:gap-6">
   <div class="flex-1">
     <h3 class="text-xl font-semibold mb-3">
-      <span class="text-base-900">{title}</span>
+      <a href={`/projects/${slug}`}>
+        <span class="text-base-900">{title}</span>
+      </a>
       <span class="text-base-400 ml-2">2024</span>
     </h3>
-
     {
       tags && (
         <div class="flex gap-3 mb-4">
@@ -35,10 +37,12 @@ const { title, description, tags, image } = Astro.props;
     </p>
   </div>
   <div>
-    <Image
-      src={image}
-      alt={title}
-      class="w-full h-60 md:h-42 object-cover rounded-xl bg-base-100"
-    />
+    <a href={`/projects/${slug}`}>
+      <Image
+        src={image}
+        alt={title}
+        class="w-full h-60 md:h-42 object-cover shadow-xs rounded-xl bg-base-100"
+      />
+    </a>
   </div>
 </div>

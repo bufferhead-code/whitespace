@@ -1,6 +1,7 @@
 ---
 import { sections } from "../../config/sections";
 import Layout from "../../layouts/Layout.astro";
+import { SEO } from "astro-seo";
 
 const { slug } = Astro.params;
 if (slug === undefined) {
@@ -20,6 +21,12 @@ export async function getStaticPaths() {
 ---
 
 <Layout>
+  <Fragment slot="head">
+    <SEO
+      description="Build Astro websites superfast, with easy to customize themes."
+      title="Whitespace Sections - Bufferthemes"
+    />
+  </Fragment>
   <div class="container mx-auto pt-32">
     <div class="pb-10 space-y-1.5">
       <h1

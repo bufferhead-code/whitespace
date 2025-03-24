@@ -7,9 +7,16 @@ import ExperienceSectionTwo from "../components/Experience/ExperienceSectionTwo.
 import ContactFormTwo from "../components/Contact/ContactFormTwo.astro";
 import StackSectionTwo from "../components/Stack/StackSectionTwo.astro";
 import TestimonialSectionOne from "../components/Testimonial/TestimonialSectionOne.astro";
+import { SEO } from "astro-seo";
 ---
 
 <Layout>
+  <Fragment slot="head">
+    <SEO
+      description="Build Astro websites superfast, with easy to customize themes."
+      title="Whitespace Premium Astro Theme - Bufferthemes"
+    />
+  </Fragment>
   <HeroSectionTwo />
   <ProjectSectionTwo />
   <ServiceSectionTwo />

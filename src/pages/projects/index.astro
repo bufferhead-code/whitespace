@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import ProjectCard from "../../components/Project/ProjectCard.astro";
 import { getCollection } from "astro:content";
+import { SEO } from "astro-seo";
 
 const allProjects = await getCollection("projects");
 // sort by priority
@@ -9,6 +10,13 @@ allProjects.sort((a, b) => b.data.priority - a.data.priority);
 ---
 
 <Layout>
+  <Fragment slot="head">
+    <SEO
+      description="Build Astro websites superfast, with easy to customize themes."
+      title="Whitespace Projects - Bufferthemes"
+    />
+  </Fragment>
+
   <div class="pt-24">
     <div
       class="space-y-3 flex-1 text-center md:text-left container mx-auto pb-10"
